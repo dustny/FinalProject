@@ -11,7 +11,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    
+  workflow_run:
+  
 jobs:
   Web-API-Automation:
 
