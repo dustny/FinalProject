@@ -11,9 +11,9 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    
+  workflow_dispatch:  
 jobs:
-  Web-UI-Automation:
+  run-automation-test:
 
     runs-on: windows-latest
 
