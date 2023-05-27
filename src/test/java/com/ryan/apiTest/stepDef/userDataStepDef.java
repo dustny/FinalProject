@@ -22,18 +22,12 @@ public class userDataStepDef {
     protected static WebDriver driver;
 
     protected RequestSpecification getDriver() {
-        ChromeOptions option = new ChromeOptions();
-        option.addArguments("--remote-allow-origins=*", "--headless");
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(option);
-        {
             RestAssured.baseURI = "https://dummyapi.io/data/v1";
             RequestSpecification request = RestAssured.given();
             request.header("app-id", "64623ba4afa9951861c8234f")
                     .header("Content-Type", "application/json")
                     .header("Accept", "application/json");
             return request;
-        }
     }
     @Test
     @When("users want to get information from website")
